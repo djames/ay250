@@ -1,0 +1,17 @@
+commit 5539ade023f638c40a38abba88395dfec14e3986
+Author: djames <dhasenkamp@berkeley.edu>
+Date:   Sun Oct 31 20:23:36 2010 -0700
+
+    adding personal project
+
+commit b93343d5abed31d9f5e59b12a65261c09916709a
+Author: djames <dhasenkamp@berkeley.edu>
+Date:   Sun Oct 31 20:10:13 2010 -0700
+
+    adding homework folders
+
+commit 54174527c1f7ef9cede144782bbd81904e96eb14
+Author: djames <dhasenkamp@berkeley.edu>
+Date:   Sun Oct 31 20:07:06 2010 -0700
+
+    first commit
