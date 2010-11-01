@@ -1,0 +1,26 @@
+Daren Hasenkamp
+19362801
+
+Part 1: If you're reading this it worked. (git clone git://github.com/djames/ay250)
+
+Part 2: I added "DistributedPrimitives.py". I intend for this to be my final project
+in this class. My plan is to adapt some code that I've written in my research, turning
+it into an importable python package to provide distributed synchronization primitives
+over networked agents.
+
+Part 3: In hw8.py. I hooked it up to my hw5 solutions, which didn't save the database,
+so you won't be able to save your database changes. However, you can add a poll and view
+a plot of whatever state you like. Here's a sample call:
+
+python hw8.py -p -state ca -dem 20 -gop 80 -endmonth november -endday 31 -pollster shitbricks -plot ca
+
+The "-plot STATE" command shows a plot for STATE, and no plot is shown if it is ommitted.
+There's some leeway with string input; I tried wherever it was easy to sanitize input and
+take care of capitals/lowercase. So you can input your state as CA, ca, CaLiFoRnIa, etc.
+(The abbreviation is the important part, so for states where the first two letters don't
+equal the abbreviation, you should use the abbreviation.)
+
+Part 4: All in bloomdemo in the repository. I wasn't able to mark my
+final commit "v2.0", it didn't let me add a commit message. *sigh*.
+Other than that I followed the directions. I didn't delete my branch
+at the end.
