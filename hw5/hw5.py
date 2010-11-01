@@ -212,4 +212,4 @@ if __name__ == "__main__" :
     # interactive webpage generator loop
     partD()
     # interactive graph generator loop
-    partF()c
+    partF()
