@@ -33,7 +33,7 @@ def dayofyear(date) :
 
 # I'm doing everything in memory. I had trouble getting sqlite and python
 # to work correctly together saving databases. I think it's a version mismatch;
-# I'm using sqlite 2.8 and I should probably be using sqlite3. Either way,
+# I'm using sqlite 2.8 and I should probably be using sqlite 3. Either way,
 # it works fine if i do things in memory.
 connection = sqlite3.connect(":memory:")
 cursor = connection.cursor()
@@ -139,14 +139,16 @@ def partE() :
     print "The democrats are poised to lose " + str(poisedtolose) + " seats."
 
 def makeplot(state) :
-    # Get all the poll data and read it into arrays
+    # Get all the poll data and read it into a list of tuples
     cmd = "select dem, gop, ind, end from polls where state='"+str(state)+"'"
     polls = cursor.execute(cmd).fetchall()
     gross = []
     for poll in polls :
         gross.append((dayofyear(poll[3]),poll[0],poll[1],poll[2]))
+    # sort the list of tuple on day of year
     gross = sorted(gross, key=lambda x: x[0])
 
+    # populate the arrays we will pass to matplotlib
     dates = []
     dems = []
     gops = []
@@ -163,6 +165,8 @@ def makeplot(state) :
     dem = cands[0][0]
     gop = cands[0][1]
     ind = cands[0][2]
+
+    # plot that shit
     plt.plot(dates,dems,label=dem,color="blue")
     plt.plot(dates,gops,label=gop,color="red")
     if (ind[0]!=" ") :
@@ -172,6 +176,7 @@ def makeplot(state) :
     plt.legend()
     plt.show()
     
+#interactive graph generator loop
 def partF() :
     while True:
         x = raw_input("Enter a state to build plot for (capitalized appreviation, ex: CA): ").strip()
@@ -184,22 +189,27 @@ def partG(state, dem, gop, ind, start, end, pollster) :
     cursor.execute(cmd)
     
 
+if __name__ == "__main__" :
+    # Populate database
+    partA()
+    partB()
+    partC()
 
-partA()
-partB()
-partC()
+    # Add more polls to database if user so desires
+    print "Before computing statistics, would you like to insert any extra polls into the database?"
+    print "\tUsage:\t<state> <dem percent> <gop percent> <independent percent> <startdate> <enddate> <pollster>"
+    print "\t\tStart/end date must be of the form XxxYY, where Xxx is the first three letters of the month with"
+    print "\t\tthe first letter capitalized and YY is the day. Pollster can be whatever you want but I'm only gonna"
+    print "\t\tparse the first word :P"
+    print "\tAny unparsable input will break this prompt loop."
+    while True :
+        x = raw_input("> ").split()
+        try : partG(x[0],x[1],x[2],x[3],x[4],x[5],x[6])
+        except : break
 
-print "Before computing statistics, would you like to insert any extra polls into the database?"
-print "\tUsage:\t<state> <dem percent> <gop percent> <independent percent> <startdate> <enddate> <pollster>"
-print "\t\tStart/end date must be of the form XxxYY, where Xxx is the first three letters of the month with"
-print "\t\tthe first letter capitalized and YY is the day. Pollster can be whatever you want but I'm only gonna"
-print "\t\tparse the first word :P"
-print "\tAny unparsable input will break this prompt loop."
-while True :
-    x = raw_input("> ").split()
-    try : partG(x[0],x[1],x[2],x[3],x[4],x[5],x[6])
-    except : break
-
-partE()
-partD()
-partF()
+    # print number of seats democrats are poised to lose
+    partE()
+    # interactive webpage generator loop
+    partD()
+    # interactive graph generator loop
+    partF()c
