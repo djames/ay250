@@ -188,26 +188,28 @@ def partG(state, dem, gop, ind, start, end, pollster) :
     cmd = "insert into polls (state, dem, gop, ind, start, end, pollster) values ('%s', '%s', '%s', '%s', '%s', '%s', '%s')" % (state,int(dem),int(gop),int(ind),start,end,pollster)
     cursor.execute(cmd)
     
-# Populate database
-partA()
-partB()
-partC()
 
-# Add more polls to database if user so desires
-print "Before computing statistics, would you like to insert any extra polls into the database?"
-print "\tUsage:\t<state> <dem percent> <gop percent> <independent percent> <startdate> <enddate> <pollster>"
-print "\t\tStart/end date must be of the form XxxYY, where Xxx is the first three letters of the month with"
-print "\t\tthe first letter capitalized and YY is the day. Pollster can be whatever you want but I'm only gonna"
-print "\t\tparse the first word :P"
-print "\tAny unparsable input will break this prompt loop."
-while True :
-    x = raw_input("> ").split()
-    try : partG(x[0],x[1],x[2],x[3],x[4],x[5],x[6])
-    except : break
+if __name__ == "__main__" :
+    # Populate database
+    partA()
+    partB()
+    partC()
 
-# print number of seats democrats are poised to lose
-partE()
-# interactive webpage generator loop
-partD()
-# interactive graph generator loop
-partF()
+    # Add more polls to database if user so desires
+    print "Before computing statistics, would you like to insert any extra polls into the database?"
+    print "\tUsage:\t<state> <dem percent> <gop percent> <independent percent> <startdate> <enddate> <pollster>"
+    print "\t\tStart/end date must be of the form XxxYY, where Xxx is the first three letters of the month with"
+    print "\t\tthe first letter capitalized and YY is the day. Pollster can be whatever you want but I'm only gonna"
+    print "\t\tparse the first word :P"
+    print "\tAny unparsable input will break this prompt loop."
+    while True :
+        x = raw_input("> ").split()
+        try : partG(x[0],x[1],x[2],x[3],x[4],x[5],x[6])
+        except : break
+
+    # print number of seats democrats are poised to lose
+    partE()
+    # interactive webpage generator loop
+    partD()
+    # interactive graph generator loop
+    partF()c
