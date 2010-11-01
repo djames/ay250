@@ -1,0 +1,35 @@
+Daren Hasenkamp
+19362801
+
+Problem 1
+Run with
+python hw3p1.py <host> <port>
+Optionally, run
+python hw3p1.py
+and the host/port will default to localhost:5020 (this is how I tested).
+
+Designed to connect to Chris Klein's rpc server.
+
+Uses the moonlanding.png image from hw2.
+
+Sample output is in distorted[1-3].png and fixed[1-3].png.
+
+
+Problem 2
+Run with
+python hw3p2.py
+
+A list of the given sound files and the notes in them will be produced.
+See comments in code for explanation of how it works.
+
+Output is:
+Notes present in sound_files/1.aif:  C4 D4 G4
+Notes present in sound_files/2.aif:  F3
+Notes present in sound_files/3.aif:  A4
+Notes present in sound_files/4.aif:  C4
+Notes present in sound_files/5.aif:  F#2
+Notes present in sound_files/6.aif:  C5
+Notes present in sound_files/7.aif:  D5
+Notes present in sound_files/8.aif:  F4
+Notes present in sound_files/9.aif:  G3
+

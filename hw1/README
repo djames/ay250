@@ -1,0 +1,64 @@
+QUESTIONS
+a. The following is a chart of 20 test runs of my program, including the
+   requested information:
+
+Test Run  |  Born After 100  |  Alive After 150
+1         |  308             |  8930
+2         |	 10              |  0
+3         |  189             |  4533
+4         |  10              |  0
+5         |  10              |  0
+6         |  3471            |  126231
+7         |  10              |  0
+8         |  10              |  0
+9         |  3146            |  109630
+10        |  952             |  30293
+11        |  767             |  22919
+12        |  1088            |  36758
+13        |  645             |  19565
+14        |  1826            |  61694
+15        |  2950            |  102086
+16        |  358             |  10011
+17        |  2445            |  85194
+18        |  3115            |  112016
+19        |  1279            |  42910
+20        |  3115            |  108061
+---------------------------------------
+AVERAGE   |  1284.7          |  44041.9
+
+(NOTE: As I understood it, bears are born in clumps every 5 years at an
+instantaneous moment in time; my "born after 100" and "alive after"
+columns include bears born in the instantaneous moment occuring at the
+100th and 150th year, respectively.)
+
+b. I had non-extinct populations after 150 years with p(male) as high as .93
+   and as low as .15.
+
+c. To use the plotting routine, simply run the program. It takes no arguments
+   (pmale and number of generations can be set by modifying the script) and
+   runs the simulation automatically, then throws you into an interactive prompt
+   and prints directions for how to generate a tree.
+   I printed the bears on the plot by numerical ID and I did not show brothers or
+   sisters. The tree is a directed graph; the thick end of the edge goes to the
+   parent. When you build a tree, all bears in the tree are printed to stdout,
+   so you can see the names that match the numerical IDs in the tree.
+
+ON NAME GENERATION/WEB SCRAPING:
+My program saves data it scrapes (from www.listofbabynames.org) to two files: 
+"boynames.txt" and "girlnames.txt". Every time it runs, it checks for these two 
+files. If it finds them, it uses the names in them; if either is missing, it 
+scrapes the name website and saves names to "boynames.txt" or "girlnames.txt".
+I included "boynames.txt" and "girlnames.txt" in the tarball, so when you run
+my program right after unpacking the tarball it will use these instead of
+scraping.
+I did this as insurance against the possibility that the website will change
+between now and when the program is graded, which would more than likely break
+the scraper function.
+If you would like to force my program to use its scraper, simply rename either
+or both of these files.
+Also, the service I used didn't have nearly enough names in it for all the living
+bears in a sucscessful population, so I just appended integers to names when they
+are re-used. So, no living bears ever have the same name string. I do reuse
+names when bears die, but there's only about 8000 names on the website I scraped,
+so when there's 100000 living bears, there's really no solution but to append
+some junk to the end of names.

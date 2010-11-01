@@ -1,0 +1,26 @@
+Daren Hasenkamp
+19362801
+
+Not really much to say about this one. Run it with "python hw6.py". (No args.)
+
+Most importantly: For the image search, I used the pYsearch library that Chris
+linked us to in the email. I installed it on my machine, and my code depends upon
+it, so you should make sure you have it installed. The code is at
+http://pysearch.sourceforge.net/
+It's surprisingly easy to install; the webpage has instructions. I normally
+wouldn't code to dependencies without including said dependencies in the submission,
+but I figured it was safe in this case since Chris recommended it. (and thanks,
+it made the image query really easy.)
+
+The initial image displayed is the plot from lecture/the mpl_figure_editor.py
+code. Seemed like a reasonable enough/easy thing to do. You can't actually apply
+the image manipulation functions to it, but it won't break anything if you click
+the buttons.
+
+Some queries don't return images. For example, I tried "naked hippies on acid"
+and didn't get any results. When this happens, a stack trace is printed but the GUI
+continues to work properly; the image/url just doesn't get updated.
+
+IMAGE MANIPULATION FUNCTIONS:
+I did a gaussian filter, a rotation, and a fourier transform. All are implemented
+using the functions in scipy.ndimage (again, thanks to Chris for pointing us to this).

@@ -1,0 +1,18 @@
+Daren Hasenkamp
+19362801
+
+I had trouble with saving databases (I kept getting an error "file is encrypted or not a database"
+from the database files i created; I believe it's a version mismatch), so I did everything in memory.
+When you run "python hw5.py", the database is first populated in memory. You are then asked
+if you would like to insert any extra polls. It tells you how to do so. There is no input
+sanitization; if any error occurs, the prompt loop breaks and the program continues.
+(So, when you're done adding polls, just hit enter.)
+Then, the number of seats the democrats are poised to lose is printed. I pulled my poll data from
+the linked to website at about 2:30am October 9; in my dataset, the democrats are poised to
+lose 10 seats. (This is computed programmatically; see "partE()" in the script.)
+Next you are asked for a state to display a web page for. You can provide a state (using capitalized
+2-letter abbreviations) as many times as you like. Give a blank line when you're done.
+Finally, it asks you to for a state to build a graph for. Input is just like the website and you
+can go as many times as you like. Give a blank line when you're done.
+
+Included is a graph (CA.png) and webpage (CA.html) for California.

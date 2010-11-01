@@ -1,0 +1,37 @@
+#State,Democrat,Republican,Independent,IncumbentParty
+AL,William Barnes,Richard Shelby, ,Republican
+AK,Scott McAdams,Joe Miller,Lisa Murkowski,Republican
+AZ,Rodney Glassman,John McCain, ,Republican
+AR,Blanche Lincoln,John Boozman, ,Democrat
+CA,Barbara Boxer,Carly Fiorina, ,Democrat
+CO,Michael Bennet,Ken Buck, ,Democrat
+CT,Richard Blumenthal,Linda McMahon, ,Democrat
+DE,Chris Coons, Christine O'Donnell, ,Democrat
+FL,Kendrick Meek,Marco Rubio,Charlie Crist,Republican
+GA,Mike Thurmond,Johnny Isakson, ,Republican
+HI,Daniel Inouye,Cam Cavasso, ,Democrat
+ID,Tom Sullivan,Mike Crapo, ,Republican
+IL,Alexi Giannoulias,Mark Kirk, ,Democrat
+IN,Brad Ellsworth,Dan Coats, ,Democrat
+IA,Roxanne Conlin,Chuck Grassley, ,Republican
+KS,Lisa Johnston,Jerry Moran, ,Republican
+KY,Jack Conway,Rand Paul, ,Republican
+LA,Charlie Melancon,David Vitter, ,Republican
+MD,Barbara Mikulski,Eric Wargotz, ,Democrat
+MO,Robin Carnahan,Roy Blunt, ,Republican
+NV,Harry Reid,Sharron Angle, ,Democrat
+NH,Paul Hodes,Kelly Ayotte, ,Republican
+NY,Kirsten Gillibrand,Joseph DioGuardi, ,Democrat
+NC,Elaine Marshall,Richard Burr, ,Republican
+ND,Tracy Potter,John Hoeven, ,Democrat
+OH,Lee Fisher,Rob Portman, ,Republican
+OK,Jim Rogers,Tom Coburn, , Republican
+OR,Ron Wyden,Jim Huffman, ,Democrat
+PA,Joe Sestak,Pat Toomey, ,Democrat
+SC,Alvin Greene,Jim DeMint, ,Republican
+SD, ,John Thune, ,Republican
+UT,Sam Granato,Mike Lee, ,Republican
+VT,Pat Leahy,Len Britton, ,Democrat
+WA,Patty Murray,Dino Rossi, ,Democrat
+WV,Joe Manchin,John Raese, ,Democrat
+WI,Russ Feingold,Ron Johnson, ,Democrat
